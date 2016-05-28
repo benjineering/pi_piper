@@ -1,3 +1,6 @@
+## Fork Notes
+Forked so that `PiPiper::wait` returns the pin for testing purposes.
+
 ## Overview
 
 [![Build Status](https://travis-ci.org/jwhitehorn/pi_piper.png)](https://travis-ci.org/jwhitehorn/pi_piper)
