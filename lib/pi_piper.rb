@@ -40,6 +40,7 @@ module PiPiper
   #   Options hash. Options include `:pin`, `:invert` and `:trigger`.
   # 
   def watch(options, &block)
+    pin = nil
     new_thread = Thread.new do
       pin = PiPiper::Pin.new(options)
       loop do
@@ -52,7 +53,7 @@ module PiPiper
       end 
     end
     new_thread.abort_on_exception = true
-    new_thread
+    pin
   end
   
   #Defines an event block to be executed after a pin either goes high or low.
